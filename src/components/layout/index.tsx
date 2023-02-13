@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import Navbar from "../shared/navbar";
 import Meta from "./meta";
 
 const Layout = ({
@@ -11,7 +12,8 @@ const Layout = ({
   return (
     <>
       <Meta {...meta} />
-      <main className="flex text-center items-center justify-center h-screen w-screen">
+      <Navbar />
+      <main className="flex flex-col text-center items-center justify-center h-full w-screen">
         {children}
       </main>
     </>
