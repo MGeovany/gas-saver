@@ -14,7 +14,7 @@ const Layout = ({
     <>
       <Meta {...meta} />
       <Navbar />
-      <main className="flex flex-col text-center items-center justify-center h-full w-screen">
+      <main className="flex flex-col text-center items-center justify-center h-full md:w-screen w-full">
         {children}
       </main>
       <Footer />
