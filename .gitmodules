@@ -1,0 +1,3 @@
+[submodule "gas-saver-api"]
+	path = gas-saver-api
+	url = https://github.com/Nor01/gas-saver-api.git
