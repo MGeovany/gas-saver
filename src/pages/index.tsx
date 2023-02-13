@@ -36,7 +36,7 @@ export default function Home() {
   ];
   return (
     <>
-      <Layout>
+      <Layout scrollPosition={50}>
         <div className="text-white md:text-center flex flex-col justify-center items-center font-extrabold  md:text-7xl text-5xl w-4/5 text-left h-screen">
           Ahorrar combustible es fácil: presentamos
           <span className="text-red-400 contents"> Gas Saver</span>, tu héroe

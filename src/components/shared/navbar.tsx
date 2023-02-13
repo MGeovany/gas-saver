@@ -1,8 +1,8 @@
 import useScroll from "@/lib/hooks/useScroll";
 import Link from "next/link";
 
-const Navbar = () => {
-  const scrolled = useScroll(150);
+const Navbar = ({ scrollPosition }: { scrollPosition: number | undefined }) => {
+  const scrolled = useScroll(scrollPosition === undefined ? 0 : scrollPosition);
   const routes = [
     {
       name: "About",
@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full">
       <div
-        className={`fixed top-0 w-full ${
+        className={`fixed md:px-10 top-0 w-full ${
           scrolled ? "bg-black/50 backdrop-blur-xl" : "bg-black"
         } z-30 transition-all`}
       >

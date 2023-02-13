@@ -6,14 +6,16 @@ import Meta from "./meta";
 const Layout = ({
   meta,
   children,
+  scrollPosition,
 }: {
   meta?: { title?: string; description?: string };
   children: ReactNode;
+  scrollPosition?: number;
 }) => {
   return (
     <>
       <Meta {...meta} />
-      <Navbar />
+      <Navbar scrollPosition={scrollPosition} />
       <main className="flex flex-col text-center items-center justify-center h-full md:w-screen w-full">
         {children}
       </main>
