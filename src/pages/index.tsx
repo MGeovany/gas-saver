@@ -48,7 +48,7 @@ export default function Home() {
         </div>
         <div className="my-10 md:h-screen flex flex-col justify-center items-center">
           <p className="font-bold text-2xl text-center">Caracteristicas 🎖️</p>
-          <div className="my-10 grid align-middle justify-items-center md:w-11/12 w-full animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 md:px-40 px-10 md:grid-cols-3">
+          <div className="my-10 grid align-middle justify-items-center sm:w-full animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 md:w-9/12 px-10 md:grid-cols-3">
             {features.map(({ title, description }) => (
               <Card key={title} title={title} description={description} />
             ))}

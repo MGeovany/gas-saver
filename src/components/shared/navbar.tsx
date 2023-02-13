@@ -1,9 +1,8 @@
 import useScroll from "@/lib/hooks/useScroll";
-import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
-  const scrolled = useScroll(250);
+  const scrolled = useScroll(150);
   const routes = [
     {
       name: "About",
