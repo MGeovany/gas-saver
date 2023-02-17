@@ -6,7 +6,7 @@ import Layout from "@/components/layout";
 const Contact = () => {
   return (
     <Layout scrollPosition={50}>
-      <div className="md:h-screen h-screen flex flex-col items-center justify-center md:w-11/12 sm:w-full">
+      <div className="md:h-screen h-screen flex flex-col items-center justify-center md:w-11/12 sm:w-full mt-20">
         <h1 className="leading-snug md:text-7xl text-4xl font-bold">
           Love to hear from you, <br /> Get in touch 👋
         </h1>

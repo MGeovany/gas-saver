@@ -18,9 +18,7 @@ const About = () => {
               por el coste de la gasolina para los desplazamientos diarios
             </span>{" "}
             y los viajes por carretera, y nos dedicamos a ofrecer una solución
-            que elimine ese estrés. En Gas-Saver, creemos en la capacitación de
-            los conductores con el conocimiento y las herramientas que necesitan
-            para tomar decisiones informadas sobre sus gastos de combustible.
+            que elimine ese estrés.
             <br />
             <br />
             Nuestra aplicación está diseñada para ser fácil de usar y eficiente,
@@ -31,17 +29,8 @@ const About = () => {
               vehículos.
             </span>{" "}
             Nuestro objetivo es ayudarle a reducir sus gastos de combustible y
-            maximizar sus ahorros, para que pueda dedicar más tiempo a las cosas
-            que más le importan. Nos apasiona lo que hacemos y buscamos
-            constantemente formas de mejorar nuestro producto. Valoramos sus
-            comentarios y siempre estamos abiertos a sugerencias. Estamos aquí
-            para ayudarle en su viaje hacia el ahorro de combustible, así que no
-            dude en ponerse en contacto con nosotros con cualquier pregunta o
-            preocupación. En Gas-Saver, somos más que una calculadora de costes
-            de combustible -{" "}
-            <span className=" text-blue-400">somos su héroe personal </span>
-            de costes de combustible. Empiece a ahorrar dinero con nosotros hoy
-            mismo.
+            <span className=" text-blue-400">maximizar sus ahorros,</span> para
+            que pueda dedicar más tiempo a las cosas que más le importan.
           </p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-2xl py-2 w-80 rounded-lg mt-20">
             Try Demo
