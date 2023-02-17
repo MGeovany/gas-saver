@@ -33,7 +33,7 @@ const About = () => {
             que pueda dedicar más tiempo a las cosas que más le importan.
           </p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-2xl py-2 w-80 rounded-lg mt-20">
-            Try Demo
+            Probar Demo
           </button>
         </div>
       </div>

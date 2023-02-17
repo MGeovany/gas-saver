@@ -43,7 +43,7 @@ export default function Home() {
           personal del coste del <br />
           combustible
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-4xl py-2 w-80 rounded-lg mt-48">
-            Try it out
+            Iniciar
           </button>
         </div>
         <div className="my-10 md:h-screen flex flex-col justify-center items-center">
