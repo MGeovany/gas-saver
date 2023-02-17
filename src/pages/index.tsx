@@ -37,18 +37,20 @@ export default function Home() {
   return (
     <>
       <Layout scrollPosition={50}>
-        <div className="text-white md:text-center flex flex-col justify-center items-center font-extrabold  md:text-7xl text-5xl w-4/5 text-left h-screen">
-          Ahorrar combustible es fácil: presentamos
-          <span className="text-red-400 contents"> Gas Saver</span>, tu héroe
-          personal del coste del <br />
-          combustible
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-4xl py-2 w-80 rounded-lg mt-48">
-            Try it out
+        <div className="text-white md:text-center flex flex-col justify-center items-center font-bold md:text-7xl text-5xl w-4/5 text-left h-screen">
+          Aprende a ahorrar dinero en combustible con
+          <span className="text-red-400 contents main-title-color font-extrabold">
+            {" "}
+            Gas Saver
+          </span>
+          , tu héroe personal en el coste del combustible.
+          <button className="main-button text-white font-bold text-4xl py-2 w-80 rounded-lg mt-48">
+            Pruébalo Ahora!
           </button>
         </div>
-        <div className="my-10 md:h-screen flex flex-col justify-center items-center">
-          <p className="font-bold text-2xl text-center">Caracteristicas 🎖️</p>
-          <div className="my-10 grid align-middle justify-items-center sm:w-full animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 md:w-9/12 px-10 md:grid-cols-3">
+        <div className="my-10 md:h-screen flex flex-col justify-center items-center features-background-color">
+          <p className="font-extrabold text-5xl text-center features-text">Características</p>
+          <div className="my-10 grid align-middle justify-items-center sm:w-full animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 md:w-9/12 px-10 md:grid-cols-3 features-text">
             {features.map(({ title, description }) => (
               <Card key={title} title={title} description={description} />
             ))}

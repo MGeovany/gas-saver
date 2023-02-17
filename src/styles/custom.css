@@ -1,0 +1,70 @@
+:root {
+    --main-background-blue: #4CA3AF;
+    --main-background-white: #f2f7fc;
+    --main-background-50-white: #D2E0EE;
+    --text-dark-blue: #01505B;
+    --buttons-background-lred: #d53f23;
+    --buttons-text-white: #f2f7fc;
+    --information-background-white: #f4fbf8;
+    --information-text-yellow: #f1c313;
+}
+
+.navbar-background {
+    background-color: var(--main-background-white);
+}
+
+.navbar-background\/50 {
+    background-color: var(--main-background-50-white);
+}
+
+.navbar-logo-text {
+    color: var(--text-dark-blue);
+    font-weight: bold;
+}
+
+.navbar-menu-items {
+    color: var(--text-dark-blue);
+}
+
+.main-background-color {
+    background: var(--main-background-blue);
+}
+
+.main-button {
+    background: var(--buttons-background-lred);
+    color: var(--buttons-text-white);
+}
+
+.main-button:hover {
+    background: var(--main-background-white);
+    color: var(--buttons-background-lred);
+    border: 1px solid var(--buttons-background-lred);
+    transition: 0.5s;
+}
+
+.main-title-color {
+    color: var(--buttons-background-lred);
+}
+
+.features-background-color {
+    background: url('../images/text1.1.png');
+}
+
+.features-text{
+    color: var(--text-dark-blue);
+}
+
+.footer-bg {
+    background: var(--main-background-50-white);
+}
+
+.footer-text {
+    color: var(--text-dark-blue);
+}
+
+.footer-border-y-neutral-800 {
+    --tw-border-opacity: 1;
+    border-top-color: var(--main-background-blue);
+    border-bottom-color: var(--main-background-blue);
+}
+

@@ -16,7 +16,7 @@ const Layout = ({
     <>
       <Meta {...meta} />
       <Navbar scrollPosition={scrollPosition} />
-      <main className="flex flex-col text-center items-center justify-center h-full md:w-screen w-full">
+      <main className="flex flex-col text-center items-center justify-center h-full md:w-screen w-full main-background-color">
         {children}
       </main>
       <Footer />
