@@ -1,3 +1,5 @@
+import { FormError, ValidationError } from "@formspree/react";
+
 const FormInput = ({
   type,
   name,
@@ -5,6 +7,8 @@ const FormInput = ({
   required,
   label,
   span,
+  value,
+  onChange,
 }: {
   type: string;
   name: string;
@@ -12,6 +16,8 @@ const FormInput = ({
   required?: boolean;
   label: string;
   span?: number;
+  value: string;
+  onChange: (event: any) => void;
 }) => {
   return (
     <div className={`md:col-span-${span} sm:col-span-1`}>
@@ -26,6 +32,8 @@ const FormInput = ({
       <input
         type={type}
         name={name}
+        value={value}
+        onChange={onChange}
         placeholder={placeholder}
         required={required}
         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
