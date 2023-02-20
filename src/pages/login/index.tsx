@@ -15,7 +15,7 @@ export default function Login(props: any) {
       props.setToken(data.access_token);
       localStorage.setItem("token", JSON.stringify(data.access_token));
       const router = useRouter();
-      router.push("/login");
+      router.push("/dashboard");
     });
   }
 
