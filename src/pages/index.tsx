@@ -1,5 +1,8 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Card from "@/components/home/card";
 import Layout from "@/components/layout";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const features = [
@@ -34,6 +37,7 @@ export default function Home() {
         "La API de Gas-Saver se podría integrar con terceros que deseen ofrecer como un agregado una estimación de costos dentro de sus aplicaciones",
     },
   ];
+
   return (
     <>
       <Layout scrollPosition={50}>
@@ -42,9 +46,12 @@ export default function Home() {
           <span className="text-red-400 contents"> Gas Saver</span>, tu héroe
           personal del coste del <br />
           combustible
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-4xl py-2 w-80 rounded-lg mt-48">
+          <Link
+            href={"/login"}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-4xl py-2 w-80 rounded-lg mt-48"
+          >
             Iniciar
-          </button>
+          </Link>
         </div>
         <div className="my-10 md:h-screen flex flex-col justify-center items-center">
           <p className="font-bold text-2xl text-center">Caracteristicas 🎖️</p>
