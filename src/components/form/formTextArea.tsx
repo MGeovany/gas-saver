@@ -1,5 +1,15 @@
 import React from "react";
 
+interface FormTextAreaProps {
+  name: string;
+  placeholder: string;
+  required?: boolean;
+  label: string;
+  span?: number;
+  value: string;
+  rows: number;
+  onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+}
 const FormTextArea = ({
   label,
   name,
@@ -8,15 +18,7 @@ const FormTextArea = ({
   required,
   value,
   onChange,
-}: {
-  label: string;
-  name: string;
-  placeholder: string;
-  rows: number;
-  required?: boolean;
-  value: string;
-  onChange: (event: any) => void;
-}) => {
+}: FormTextAreaProps) => {
   return (
     <div className="md:col-span-2 sm:col-span-1 pt-5 pb-3">
       {label && (

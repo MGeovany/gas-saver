@@ -1,4 +1,15 @@
-import { FormError, ValidationError } from "@formspree/react";
+import React from "react";
+
+interface FormInputProps {
+  type: string;
+  name: string;
+  placeholder: string;
+  required?: boolean;
+  label: string;
+  span?: number;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
 const FormInput = ({
   type,
@@ -9,16 +20,7 @@ const FormInput = ({
   span,
   value,
   onChange,
-}: {
-  type: string;
-  name: string;
-  placeholder: string;
-  required?: boolean;
-  label: string;
-  span?: number;
-  value: string;
-  onChange: (event: any) => void;
-}) => {
+}: FormInputProps) => {
   return (
     <div className={`md:col-span-${span} sm:col-span-1`}>
       {label && (

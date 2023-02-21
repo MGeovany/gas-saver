@@ -6,15 +6,26 @@ import { useForm } from "@formspree/react";
 import { useEffect, useState } from "react";
 
 const Contact = () => {
-  const [formState, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || "");
-  const [formData, setFormData] = useState({
+  interface FormData {
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+  }
+  const initialStateForm: FormData = {
     name: "",
     email: "",
     phone: "",
     message: "",
-  });
+  };
+  const [formState, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || "");
+  const [formData, setFormData] = useState<FormData>(initialStateForm);
 
-  const handleInputChange = (event: any) => {
+  const handleInputChange = (
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -28,10 +39,11 @@ const Contact = () => {
       },
     });
   };
-  const handleFormSubmit = async (event: any) => {
+
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     await handleSubmit(formData);
-    setFormData({ name: "", email: "", message: "", phone: "" });
+    setFormData(initialStateForm);
   };
 
   useEffect(() => {
