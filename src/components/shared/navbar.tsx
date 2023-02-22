@@ -1,9 +1,8 @@
-import useScroll from "@/lib/hooks/useScroll";
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useSignInModal } from "../layout/signInModal";
-import { motion } from "framer-motion";
 import UserDropdown from "../layout/userDropdown";
+import useScroll from "@/lib/hooks/useScroll";
 
 const Navbar = ({ scrollPosition }: { scrollPosition: number | undefined }) => {
   const scrolled = useScroll(scrollPosition === undefined ? 0 : scrollPosition);
@@ -59,7 +58,6 @@ const Navbar = ({ scrollPosition }: { scrollPosition: number | undefined }) => {
               <UserDropdown />
             )}
           </ul>
-
           <SignInModal />
         </div>
       </div>

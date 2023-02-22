@@ -1,5 +1,8 @@
 import Card from "@/components/home/card";
 import Layout from "@/components/layout";
+import { useSignInModal } from "@/components/layout/signInModal";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const features = [
@@ -35,6 +38,19 @@ export default function Home() {
     },
   ];
 
+  const { data: session } = useSession();
+  const { SignInModal, setShowSignInModal } = useSignInModal();
+
+  const router = useRouter();
+
+  const toDashboard = () => {
+    if (!session) {
+      setShowSignInModal(true);
+    } else {
+      router.push("/dashboard");
+    }
+  };
+
   return (
     <>
       <Layout scrollPosition={50}>
@@ -43,8 +59,11 @@ export default function Home() {
           <span className="text-red-400 contents"> Gas Saver</span>, tu héroe
           personal del coste del <br />
           combustible
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-4xl py-2 w-80 rounded-lg mt-48">
-            Iniciar
+          <button
+            onClick={() => toDashboard()}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-4xl py-2 w-80 rounded-lg mt-48"
+          >
+            {!session ? "Iniciar" : "Probar Demo"}
           </button>
         </div>
         <div className="my-10 md:h-screen flex flex-col justify-center items-center">
@@ -55,6 +74,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <SignInModal />
       </Layout>
     </>
   );
