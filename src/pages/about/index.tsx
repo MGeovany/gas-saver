@@ -1,6 +1,22 @@
 import Layout from "@/components/layout";
+import { useSignInModal } from "@/components/layout/signInModal";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const About = () => {
+  const { data: session } = useSession();
+  const { SignInModal, setShowSignInModal } = useSignInModal();
+
+  const router = useRouter();
+
+  const toDashboard = () => {
+    if (!session) {
+      setShowSignInModal(true);
+    } else {
+      router.push("/dashboard");
+    }
+  };
+
   return (
     <Layout>
       <div className="mt-20 md:h-screen  flex flex-col items-center justify-center md:w-11/12 sm:w-full">
@@ -32,11 +48,15 @@ const About = () => {
             <span className=" text-blue-400">maximizar sus ahorros,</span> para
             que pueda dedicar más tiempo a las cosas que más le importan.
           </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-2xl py-2 w-80 rounded-lg mt-20">
-            Probar Demo
+          <button
+            onClick={() => toDashboard()}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-2xl py-2 w-80 rounded-lg mt-20"
+          >
+            {!session ? "Iniciar" : "Probar Demo"}
           </button>
         </div>
       </div>
+      <SignInModal />
     </Layout>
   );
 };
