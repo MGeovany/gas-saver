@@ -23,6 +23,7 @@
 ### Author
 
 - M Geovany Castro ([@mgeovany](https://github.com/mgeovany))
+- Mainor Aguilar )[@Nor01](https://github.com/Nor01)
 
 ### Update the API submodule
 
