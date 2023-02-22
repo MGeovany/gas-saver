@@ -1,6 +1,5 @@
 import Card from "@/components/home/card";
 import Layout from "@/components/layout";
-import { useSession } from "next-auth/react";
 
 export default function Home() {
   const features = [
@@ -35,7 +34,6 @@ export default function Home() {
         "La API de Gas-Saver se podría integrar con terceros que deseen ofrecer como un agregado una estimación de costos dentro de sus aplicaciones",
     },
   ];
-  // const { data: session, status } = useSession();
 
   return (
     <>
